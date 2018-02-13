@@ -1,0 +1,24 @@
+{
+  "name": "democracy-bot",
+  "version": "1.0.0",
+  "description": "democracy bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneTrueBen/democracy-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OneTrueBen/democracy-bot/issues"
+  },
+  "homepage": "https://github.com/OneTrueBen/democracy-bot#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.5",
+    "messenger-bot": "^2.4.0"
+  }
+}
