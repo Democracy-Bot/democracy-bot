@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Democracy Bot</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>Meet DemocracyBot</h1>
+        </header>
+        <div style="float:right;padding-left: 20px;padding-top:19px;">
+            <img src="./icon.png" height="200">
+        </div>
+
+        <p>In Canada, our government makes big decisions all the time. However, despite being a democracy, citizens are often powerless when it comes to having a say in these decisions and laws.</p>
+        <p>Contacting your local representative can be a messy business, with many hoops to jump through. Democracybot seeks to change this.</p>
+        <p>By connecting you to your representatives through a simple Facebook Messenger chat, Democracybot cuts out the confusion governments enable and lets you have a say. Pick a cause, enter your location, and Democracybot will find your representative and send them a message stating your position.</p>
+        <p>Programs like this already exist in the United States, so don’t let Canada fall behind - participate in the government, and help enable democracy. What you have to say matters, and we’ll amplify your voice.</p>
+    </div>
+
+    <div>
+        <h1>The Issues</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openIssue(event, 'IPRA')">IPRA</button>
+            <button class="tablinks" onclick="openIssue(event, 'Pipeline')">Pipeline Review</button>
+        </div>
+
+        <div id="IPRA" class="tabcontent">
+            <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
+            <h3>IPRA</h3>
+            <p>
+                Bell, along with other companies, is proposing the creation of an Internet Piracy Review Agency (IPRA) to look find websites that promote or enable piracy, and to put them on a blacklist that telecoms can use to block access to said sites.
+            </p>
+            <p>
+                <b>Pros:</b> Crack down on piracy in Canada, block access to illegal sites
+            </p>
+            <p>
+                <b>Cons:</b> Infringes upon internet freedom, is unclear and may block benign sites, too much power for corporations
+            </p>
+            <p>
+                <b>Read more:</b><br>
+                <a href="http://www.cbc.ca/news/business/bell-piracy-website-blocking-internet-1.4308068">http://www.cbc.ca/news/business/bell-piracy-website-blocking-internet-1.4308068</a><br>
+                <a href="http://www.huffingtonpost.ca/2018/01/29/cbc-big-telecom-join-forces-to-push-for-website-blocking-in-piracy-fight_a_23347007/">http://www.huffingtonpost.ca/2018/01/29/cbc-big-telecom-join-forces-to-push-for-website-blocking-in-piracy-fight_a_23347007/</a><br>
+            </p>
+        </div>
+        <div id="Pipeline" class="tabcontent">
+            <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
+            <h3>Pipeline Review</h3>
+            <p>
+                Bill C-69 proposes a more thorough approval process for oil pipelines through an Impact Assessment Agency, which would consult with Indigenous communities and environmental groups to approve and regulate these projects.
+            </p>
+            <p>
+                <b>Pros:</b> Improving relations with Indigenous communities, ensuring safer oil transfer, reducing environmental impact
+            </p>
+            <p>
+                <b>Cons:</b> Loses money for oil companies by making it harder to approve their projects, allowing non-professionals and interest groups to weigh in
+            </p>
+            <p>
+                <b>Read more:</b><br>
+                <a href="http://www.cbc.ca/news/canada/edmonton/ucp-leader-new-pipeline-approval-process-worst-news-1.4527364">http://www.cbc.ca/news/canada/edmonton/ucp-leader-new-pipeline-approval-process-worst-news-1.4527364</a><br>
+                <a href="https://www.bnn.ca/ottawa-announces-overhaul-of-pipeline-review-process-1.992336">https://www.bnn.ca/ottawa-announces-overhaul-of-pipeline-review-process-1.992336</a>
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h1>How to use DemocracyBot</h1>
+        <ol>
+            <li>Go to <a href="https://m.me/DemocracyBot" target="_blank">m.me/DemocracyBot</a></li>
+            <li>Send any message, like "Hi" or "Good Morning"</li>
+            <li>Follow the on-screen prompts</li>
+        </ol>
+    </div>
+    <script>
+        function openIssue(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+<footer>
+    This project was put together for the 2018 MariHacks Hackathon.
+</footer>
+
+</html>
